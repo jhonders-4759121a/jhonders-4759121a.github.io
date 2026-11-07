@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>b站-哔哩哔哩怎么玩_新手入门与热门内容推荐</title>
+<meta name="description" content="b站（哔哩哔哩）内容专题页，系统梳理b站热门分区、番剧国创、鬼畜生活、学习区与直播玩法，提供新手入门顺序、热门内容推荐、追更指南与常见问题解答，帮助新老用户快速找到值得看的视频与UP主。">
+<meta name="keywords" content="b站,哔哩哔哩,UP主推荐,b站热门分区,b站番剧">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23fb7299'/%3E%3Cpath d='M28 34h44v30a10 10 0 0 1-10 10H38a10 10 0 0 1-10-10z' fill='%23fff'/%3E%3Cpath d='M34 26l10 8M66 26l-10 8' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --pk:#fb7299;--pk-soft:#ffe7ee;--pk-deep:#e85a84;
+  --ink:#1f2329;--ink-2:#454a52;--ink-3:#7b8189;
+  --bg:#f7f8fa;--card:#ffffff;--line:#eceef2;
+  --bl:#00a1d6;--bl-soft:#e6f7fd;
+  --radius:16px;--shadow:0 4px 18px rgba(31,35,41,.06);
+  --shadow-h:0 10px 26px rgba(31,35,41,.11);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+h1,h2,h3,h4{line-height:1.35;font-weight:700}
+section{scroll-margin-top:76px}
+
+/* ============ 导航 ============ */
+.topbar{
+  position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+}
+.topbar-in{display:flex;align-items:center;gap:22px;height:62px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;letter-spacing:.3px;flex-shrink:0}
+.logo-mark{
+  width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--pk),#ff9fbb);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:800;
+  box-shadow:0 4px 12px rgba(251,114,153,.35);
+}
+.logo span b{color:var(--pk)}
+.nav-links{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  padding:7px 12px;border-radius:9px;font-size:14px;color:var(--ink-2);
+  white-space:nowrap;transition:.18s;
+}
+.nav-links a:hover{background:var(--pk-soft);color:var(--pk-deep)}
+.topbar-btn{
+  flex-shrink:0;background:linear-gradient(135deg,var(--pk),var(--pk-deep));color:#fff;
+  padding:8px 17px;border-radius:999px;font-size:14px;font-weight:600;
+  box-shadow:0 5px 14px rgba(251,114,153,.32);
+}
+
+/* ============ Banner ============ */
+.hero{
+  background:
+    radial-gradient(900px 380px at 88% -10%,rgba(251,114,153,.22),transparent 62%),
+    radial-gradient(700px 340px at 4% 110%,rgba(0,161,214,.16),transparent 60%),
+    #fff;
+  border-bottom:1px solid var(--line);
+  padding:44px 0 40px;
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:36px;align-items:center}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.hero-tags span{
+  background:var(--pk-soft);color:var(--pk-deep);font-size:12.5px;font-weight:600;
+  padding:4px 11px;border-radius:999px;
+}
+.hero h1{font-size:33px;letter-spacing:-.5px;margin-bottom:14px}
+.hero h1 em{color:var(--pk);font-style:normal}
+.hero p.lead{color:var(--ink-2);font-size:15.5px;margin-bottom:6px}
+.hero p.lead + p.lead{color:var(--ink-3);font-size:14px}
+.searchbox{display:flex;gap:9px;margin:22px 0 18px;max-width:520px}
+.searchbox input{
+  flex:1;border:1.5px solid var(--line);background:#fff;border-radius:12px;
+  padding:12px 16px;font-size:14.5px;color:var(--ink);outline:none;transition:.2s;
+}
+.searchbox input:focus{border-color:var(--pk);box-shadow:0 0 0 4px rgba(251,114,153,.13)}
+.searchbox button{
+  border:0;cursor:pointer;background:var(--ink);color:#fff;font-size:14.5px;font-weight:600;
+  padding:0 24px;border-radius:12px;transition:.2s;
+}
+.searchbox button:hover{background:var(--pk-deep)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:9px}
+.hero-btns a{
+  font-size:13.5px;padding:8px 15px;border-radius:10px;background:#fff;
+  border:1px solid var(--line);color:var(--ink-2);font-weight:500;transition:.18s;
+}
+.hero-btns a:hover{border-color:var(--pk);color:var(--pk-deep);transform:translateY(-1px);box-shadow:var(--shadow)}
+.hero-side{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.side-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 14px;
+  box-shadow:var(--shadow);transition:.2s;
+}
+.side-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.side-card .sc-num{font-size:23px;font-weight:800;color:var(--pk)}
+.side-card .sc-label{font-size:12.5px;color:var(--ink-3);margin-top:2px}
+.side-card:nth-child(2) .sc-num{color:var(--bl)}
+.side-card:nth-child(3) .sc-num{color:#f5a623}
+.side-card:nth-child(4) .sc-num{color:#7c5cff}
+
+/* ============ 通用区块 ============ */
+.sec{padding:46px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:24px}
+.sec-head h2{font-size:23px;letter-spacing:-.3px}
+.sec-head h2::before{
+  content:"";display:inline-block;width:5px;height:19px;border-radius:3px;
+  background:linear-gradient(var(--pk),var(--bl));margin-right:10px;vertical-align:-2px;
+}
+.sec-head p{font-size:13.5px;color:var(--ink-3);margin-top:5px}
+.more-link{font-size:13.5px;color:var(--ink-3);flex-shrink:0;transition:.18s}
+.more-link:hover{color:var(--pk-deep)}
+
+/* ============ 简介 ============ */
+.intro-box{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 36px;box-shadow:var(--shadow);
+}
+.intro-box p{color:var(--ink-2);margin-bottom:14px;font-size:15px}
+.intro-box p:last-child{margin-bottom:0}
+.intro-box strong{color:var(--pk-deep);font-weight:600}
+
+/* ============ 分类入口 ============ */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cat-item{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 18px;
+  transition:.2s;position:relative;overflow:hidden;
+}
+.cat-item::after{
+  content:"";position:absolute;right:-26px;top:-26px;width:70px;height:70px;border-radius:50%;
+  background:var(--pk-soft);opacity:.55;transition:.3s;
+}
+.cat-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-h);border-color:#f8d3de}
+.cat-item:hover::after{transform:scale(1.3)}
+.cat-item h3{font-size:15.5px;margin-bottom:6px;position:relative;z-index:1}
+.cat-item p{font-size:13px;color:var(--ink-3);position:relative;z-index:1;line-height:1.6}
+
+/* ============ 推荐卡片 ============ */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.v-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);transition:.22s;display:flex;flex-direction:column;
+}
+.v-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-h)}
+.v-cover{
+  height:112px;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:800;font-size:19px;letter-spacing:1px;position:relative;
+}
+.v-cover span{position:relative;z-index:1;text-shadow:0 2px 8px rgba(0,0,0,.18)}
+.v-body{padding:15px 16px 17px;flex:1;display:flex;flex-direction:column}
+.v-type{font-size:11.5px;font-weight:700;color:var(--pk-deep);background:var(--pk-soft);padding:2px 8px;border-radius:6px;display:inline-block;margin-bottom:8px}
+.v-body h3{font-size:15.5px;margin-bottom:7px}
+.v-body .v-desc{font-size:13px;color:var(--ink-3);line-height:1.68;flex:1}
+.v-meta{display:flex;gap:12px;margin-top:12px;font-size:12px;color:var(--ink-3);flex-wrap:wrap}
+.v-meta b{color:var(--pk);font-weight:700}
+.v-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.v-tags i{font-style:normal;font-size:11.5px;color:var(--ink-3);background:#f4f5f7;padding:2px 8px;border-radius:5px}
+
+/* ============ 最新更新 ============ */
+.update-list{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.update-row{
+  display:flex;align-items:center;gap:16px;padding:15px 22px;border-bottom:1px solid var(--line);
+  transition:.16s;
+}
+.update-row:last-child{border-bottom:0}
+.update-row:hover{background:#fbfcfd}
+.u-time{font-size:12.5px;color:var(--ink-3);width:74px;flex-shrink:0;font-variant-numeric:tabular-nums}
+.u-name{font-weight:600;font-size:14.5px;width:210px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.u-desc{font-size:13.5px;color:var(--ink-3);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.u-badge{font-size:11.5px;padding:2px 9px;border-radius:6px;background:var(--bl-soft);color:#0b7ba3;flex-shrink:0;font-weight:600}
+
+/* ============ 深度解析 ============ */
+.deep{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 40px;box-shadow:var(--shadow)}
+.deep h3{font-size:17.5px;margin:26px 0 10px;color:var(--ink)}
+.deep h3:first-child{margin-top:0}
+.deep h3::before{content:"▍";color:var(--pk);margin-right:5px;font-size:14px}
+.deep p{color:var(--ink-2);font-size:15px;margin-bottom:13px;text-align:justify}
+.deep ul{margin:0 0 14px 20px;color:var(--ink-2)}
+.deep li{margin-bottom:7px;font-size:14.5px}
+.deep .hl{background:linear-gradient(transparent 62%,rgba(251,114,153,.28) 62%);font-weight:600;color:var(--ink)}
+
+/* ============ 体验指南 ============ */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.guide-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;box-shadow:var(--shadow);transition:.2s}
+.guide-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.guide-icon{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:13px;background:var(--pk-soft)}
+.guide-card:nth-child(2) .guide-icon{background:var(--bl-soft)}
+.guide-card:nth-child(3) .guide-icon{background:#fff5e3}
+.guide-card:nth-child(4) .guide-icon{background:#eef0ff}
+.guide-card:nth-child(5) .guide-icon{background:#e9f8f1}
+.guide-card:nth-child(6) .guide-icon{background:#fdeef5}
+.guide-card h3{font-size:15px;margin-bottom:7px}
+.guide-card p{font-size:13.5px;color:var(--ink-3);line-height:1.7}
+
+/* ============ FAQ ============ */
+.faq-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+.faq-item h3{font-size:14.5px;margin-bottom:9px;color:var(--ink);display:flex;gap:8px}
+.faq-item h3::before{
+  content:"Q";flex-shrink:0;width:20px;height:20px;border-radius:6px;background:var(--pk);
+  color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.faq-item p{font-size:13.5px;color:var(--ink-3);line-height:1.75;padding-left:28px}
+
+/* ============ 评论 ============ */
+.cmt-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cmt{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px 19px;box-shadow:var(--shadow);transition:.18s}
+.cmt:hover{box-shadow:var(--shadow-h)}
+.cmt-head{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;flex-shrink:0}
+.cmt-name{font-size:13.5px;font-weight:600}
+.cmt-time{font-size:11.5px;color:var(--ink-3);margin-left:auto}
+.cmt p{font-size:13.5px;color:var(--ink-2);line-height:1.72}
+.cmt-like{font-size:12px;color:var(--ink-3);margin-top:9px}
+
+/* ============ 资讯 ============ */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.news-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow);transition:.2s;display:flex;flex-direction:column}
+.news-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.news-date{font-size:12px;color:var(--pk-deep);font-weight:600;margin-bottom:8px}
+.news-card h3{font-size:14.5px;margin-bottom:8px;line-height:1.5}
+.news-card p{font-size:13px;color:var(--ink-3);line-height:1.7;flex:1}
+
+/* ============ 订阅 ============ */
+.subscribe{
+  background:linear-gradient(135deg,#2b2f38,#1f2329);border-radius:20px;padding:40px 44px;
+  display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  position:relative;overflow:hidden;
+}
+.subscribe::before{
+  content:"";position:absolute;right:-60px;top:-60px;width:230px;height:230px;border-radius:50%;
+  background:radial-gradient(circle,rgba(251,114,153,.42),transparent 70%);
+}
+.subscribe h2{color:#fff;font-size:22px;margin-bottom:8px;position:relative}
+.subscribe p{color:#a9aeb8;font-size:13.5px;position:relative}
+.sub-form{display:flex;gap:9px;position:relative;flex-shrink:0}
+.sub-form input{border:0;border-radius:11px;padding:12px 17px;font-size:14px;width:240px;outline:none;background:#3a3f49;color:#fff}
+.sub-form input::placeholder{color:#8d939d}
+.sub-form button{border:0;cursor:pointer;background:linear-gradient(135deg,var(--pk),var(--pk-deep));color:#fff;font-weight:600;padding:0 24px;border-radius:11px;font-size:14px}
+
+/* ============ 页脚 ============ */
+footer{background:#fff;border-top:1px solid var(--line);padding:40px 0 26px;margin-top:20px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+.foot-brand p{font-size:13px;color:var(--ink-3);margin-top:10px;line-height:1.75}
+.foot-col h4{font-size:13.5px;margin-bottom:12px;color:var(--ink)}
+.foot-col a{display:block;font-size:13px;color:var(--ink-3);margin-bottom:8px;transition:.16s}
+.foot-col a:hover{color:var(--pk-deep)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12.5px;color:var(--ink-3);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* ============ 响应式 ============ */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .hero h1{font-size:27px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .guide-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .deep{padding:26px 22px}
+  .intro-box{padding:26px 22px}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .topbar-in{height:56px}
+  .hero{padding:30px 0 28px}
+  .hero h1{font-size:23px}
+  .hero-side{grid-template-columns:1fr 1fr}
+  .searchbox{flex-direction:column}
+  .searchbox button{padding:12px}
+  .cat-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .cat-item{padding:15px 14px}
+  .card-grid{grid-template-columns:1fr}
+  .guide-grid{grid-template-columns:1fr}
+  .faq-list{grid-template-columns:1fr}
+  .cmt-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .update-row{flex-wrap:wrap;gap:6px 12px;padding:13px 16px}
+  .u-name{width:auto;flex:1}
+  .u-desc{width:100%;flex:none;white-space:normal;font-size:13px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:22px}
+  .subscribe{padding:28px 22px}
+  .sub-form{width:100%}
+  .sub-form input{flex:1;width:auto}
+  .sec{padding:34px 0}
+  .sec-head h2{font-size:19px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ========== 导航 ========== -->
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="logo">
+      <div class="logo-mark">B</div>
+      <span><b>b站</b>内容导航</span>
+    </div>
+    <nav class="nav-links">
+      <a href="/#hot">热门推荐</a>
+      <a href="/#update">最新更新</a>
+      <a href="/#cat">分区入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#cmt">用户评论</a>
+      <a href="/#news">相关资讯</a>
+    </nav>
+    <a class="topbar-btn" href="/#sub">订阅追更</a>
+  </div>
+</header>
+
+<!-- ========== 首屏 ========== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-tags">
+        <span>番剧国创</span><span>鬼畜生活</span><span>知识学习</span><span>直播互动</span>
+      </div>
+      <h1><em>b站</em>内容专题：从入门到追更的完整导航</h1>
+      <p class="lead">b站（哔哩哔哩）聚集了番剧、游戏、知识、生活、鬼畜与直播等多元内容，本页帮你理清分区脉络，找到真正值得花时间看的视频与UP主。</p>
+      <p class="lead">无论你是刚注册的新用户，还是每天刷首页的老观众，都能在这里按兴趣、按更新、按口碑快速定位下一部要追的内容。</p>
+      <form class="searchbox" onsubmit="return false;">
+        <input type="text" placeholder="搜索b站番剧、UP主、分区或关键词…" aria-label="站内搜索">
+        <button type="button">搜内容</button>
+      </form>
+      <div class="hero-btns">
+        <a href="/#hot">热门推荐</a>
+        <a href="/#update">最新更新</a>
+        <a href="/#cat">分区入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#cmt">用户评论</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="side-card"><div class="sc-num">20+</div><div class="sc-label">主要分区数量</div></div>
+      <div class="side-card"><div class="sc-num">6</div><div class="sc-label">本页精选专题</div></div>
+      <div class="side-card"><div class="sc-num">12</div><div class="sc-label">近期更新条目</div></div>
+      <div class="side-card"><div class="sc-num">2026</div><div class="sc-label">内容整理时间</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 内容简介 ========== -->
+<section class="sec" id="intro">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>b站是什么：内容需求与适配人群</h2>
+        <p>先理解平台逻辑，再决定从哪里开始看</p>
+      </div>
+    </div>
+    <div class="intro-box">
+      <p>b站，全称哔哩哔哩，是国内以视频为核心的内容社区。它的特别之处在于把“看”和“聊”绑在一起：你不仅能看番剧、看纪录片、看游戏实况，还能在弹幕和评论区里和成千上万人一起吐槽、一起感动、一起考据。搜索<b>b站</b>的人，需求通常很明确——要么想找某个分区里值得看的内容，要么想弄明白这个平台的玩法与秩序，要么只是想知道最近大家在追什么。</p>
+      <p>从内容结构看，b站的<b>番剧与国创</b>承担了长视频追更需求，<b>游戏区</b>承担了实况与攻略需求，<b>知识区</b>承担了学习与科普需求，<b>生活区</b>承担了日常与美食需求，<b>鬼畜区</b>与<b>音乐区</b>则提供了二创与情绪释放的出口。直播板块又是另一套逻辑，强调实时互动与陪伴感。理解这套分区体系，几乎等于拿到了b站的使用说明书。</p>
+      <p>本页适合三类人：刚接触b站、想知道从哪开始刷的新用户；已经有了偏好、希望按主题系统整理观看清单的老用户；以及想了解b站内容生态、为选题或运营做参考的内容从业者。页面按热门推荐、最新更新、分区入口、深度解析、体验指南、常见问题、用户评论、相关资讯的顺序组织，<strong>每一块都可以单独收藏</strong>，也适合作为长期回访的索引页。</p>
+      <p>值得收藏的原因很简单：b站内容更新极快，单靠首页推荐容易被算法带着走。把本页当作一个稳定的“内容地图”，你能更主动地决定今天看什么、追什么、跳过什么，而不是被动地一条条滑下去。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类入口 ========== -->
+<section class="sec" id="cat">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>b站分区入口</h2>
+        <p>按内容类型快速跳转，先定方向再挑内容</p>
+      </div>
+      <a class="more-link" href="/#hot">查看热门 →</a>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-item"><h3>番剧与国创</h3><p>正版新番、国创动画与剧场版，追更党主战场。</p></div>
+      <div class="cat-item"><h3>游戏实况</h3><p>单机通关、联机整活、电竞赛事与硬核攻略。</p></div>
+      <div class="cat-item"><h3>知识科普</h3><p>历史人文、理工科普及考试学习类长视频。</p></div>
+      <div class="cat-item"><h3>生活美食</h3><p>日常记录、探店、做饭与旅行Vlog。</p></div>
+      <div class="cat-item"><h3>鬼畜二创</h3><p>调音、剪辑与名场面再创作，弹幕浓度最高。</p></div>
+      <div class="cat-item"><h3>音乐现场</h3><p>翻唱、原创、乐器演奏与演唱会切片。</p></div>
+      <div class="cat-item"><h3>影视解说</h3><p>电影电视剧拆解、拉片分析与幕后考据。</p></div>
+      <div class="cat-item"><h3>直播互动</h3><p>游戏直播、虚拟主播与弹幕陪伴型内容。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 热门推荐 ========== -->
+<section class="sec" id="hot">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>b站热门内容推荐</h2>
+        <p>综合口碑、讨论度与更新活跃度整理</p>
+      </div>
+      <a class="more-link" href="/#update">最新更新 →</a>
+    </div>
+    <div class="card-grid">
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#fb7299,#ff9fbb)"><span>番剧 · 新番</span></div>
+        <div class="v-body">
+          <span class="v-type">番剧</span>
+          <h3>《星海归途》第二季</h3>
+          <p class="v-desc">科幻群像续作，第一集就用一场长镜头把世界观摊开。节奏偏慢但信息密度高，适合愿意二刷找伏笔的观众。</p>
+          <div class="v-tags"><i>科幻</i><i>群像</i><i>周更</i></div>
+          <div class="v-meta"><span>评分 <b>9.4</b></span><span>更新至第5集</span><span>追番 82万</span></div>
+        </div>
+      </article>
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#00a1d6,#57c7e8)"><span>知识 · 长视频</span></div>
+        <div class="v-body">
+          <span class="v-type">知识</span>
+          <h3>《一张图讲透中国古代货币》</h3>
+          <p class="v-desc">44分钟硬核科普，用实物图与地图对照讲货币流通。评论区补充了大量考古资料，看完再刷评论等于二次上课。</p>
+          <div class="v-tags"><i>历史</i><i>科普</i><i>长视频</i></div>
+          <div class="v-meta"><span>播放 <b>316万</b></span><span>点赞 21万</span><span>收藏 9.8万</span></div>
+        </div>
+      </article>
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#7c5cff,#a48dff)"><span>游戏 · 实况</span></div>
+        <div class="v-body">
+          <span class="v-type">游戏</span>
+          <h3>《雾港谜案》全流程无剧透实况</h3>
+          <p class="v-desc">推理向单机新作，UP主刻意避开剧透只讲操作思路。适合想自己通关、又怕卡关的玩家当作辅助参考。</p>
+          <div class="v-tags"><i>单机</i><i>推理</i><i>无剧透</i></div>
+          <div class="v-meta"><span>播放 <b>148万</b></span><span>共12P</span><span>评分 9.1</span></div>
+        </div>
+      </article>
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#f5a623,#ffc85c)"><span>生活 · 美食</span></div>
+        <div class="v-body">
+          <span class="v-type">生活</span>
+          <h3>《一个人住的第300天》</h3>
+          <p class="v-desc">慢节奏生活记录，从买菜到做饭几乎不剪辑。弹幕里全是“治愈”“想做饭了”，适合睡前当白噪音看。</p>
+          <div class="v-tags"><i>日常</i><i>治愈</i><i>慢节奏</i></div>
+          <div class="v-meta"><span>播放 <b>97万</b></span><span>弹幕 4.2万</span><span>系列更新中</span></div>
+        </div>
+      </article>
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#e85a84,#fb7299)"><span>鬼畜 · 二创</span></div>
+        <div class="v-body">
+          <span class="v-type">鬼畜</span>
+          <h3>《年度名场面调音大赏》</h3>
+          <p class="v-desc">把全年热门片段重新编曲串烧，节奏卡点极准。属于典型的“b站味道”内容，适合想快速了解年度梗的人。</p>
+          <div class="v-tags"><i>调音</i><i>名场面</i><i>年度盘</i></div>
+          <div class="v-meta"><span>播放 <b>512万</b></span><span>点赞 38万</span><span>弹幕 12万</span></div>
+        </div>
+      </article>
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#2b2f38,#4a515e)"><span>影视 · 解说</span></div>
+        <div class="v-body">
+          <span class="v-type">影视</span>
+          <h3>《老港片里的市井细节》</h3>
+          <p class="v-desc">从道具、招牌到街景逐帧拉片，讲的是电影，落点却是城市记忆。适合喜欢考据和城市影像的观众。</p>
+          <div class="v-tags"><i>拉片</i><i>港片</i><i>考据</i></div>
+          <div class="v-meta"><span>播放 <b>203万</b></span><span>收藏 6.4万</span><span>系列共8集</span></div>
+        </div>
+      </article>
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#00a1d6,#7c5cff)"><span>国创 · 动画</span></div>
+        <div class="v-body">
+          <span class="v-type">国创</span>
+          <h3>《山海拾遗录》</h3>
+          <p class="v-desc">水墨画风国创，单集25分钟讲一个短故事。美术风格辨识度高，剧情偏文艺，适合喜欢东方美学的观众。</p>
+          <div class="v-tags"><i>国创</i><i>水墨</i><i>单元剧</i></div>
+          <div class="v-meta"><span>评分 <b>9.2</b></span><span>更新至第9集</span><span>追番 46万</span></div>
+        </div>
+      </article>
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#f5a623,#fb7299)"><span>音乐 · 现场</span></div>
+        <div class="v-body">
+          <span class="v-type">音乐</span>
+          <h3>《小剧场Live合辑》</h3>
+          <p class="v-desc">独立乐队小场地演出实录，收音干净、机位克制。适合想找现场感、又不想被过度剪辑打扰的乐迷。</p>
+          <div class="v-tags"><i>现场</i><i>独立乐队</i><i>实录</i></div>
+          <div class="v-meta"><span>播放 <b>68万</b></span><span>点赞 5.1万</span><span>共6场</span></div>
+        </div>
+      </article>
+
+      <article class="v-card">
+        <div class="v-cover" style="background:linear-gradient(135deg,#7c5cff,#fb7299)"><span>直播 · 陪伴</span></div>
+        <div class="v-body">
+          <span class="v-type">直播</span>
+          <h3>深夜杂谈直播间</h3>
+          <p class="v-desc">以聊天和读评论为主，节奏松散但互动密度高。适合加班或学习时当背景音，弹幕氛围相对友好。</p>
+          <div class="v-tags"><i>杂谈</i><i>陪伴</i><i>深夜档</i></div>
+          <div class="v-meta"><span>在线 <b>1.2万</b></span><span>每晚22点开播</span><span>关注 31万</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== 最新更新 ========== -->
+<section class="sec" id="update">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>b站最新更新与动态</h2>
+        <p>截至 2026 年 11 月 7 日的近期更新整理</p>
+      </div>
+      <a class="more-link" href="/#news">相关资讯 →</a>
+    </div>
+    <div class="update-list">
+      <div class="update-row"><span class="u-time">11-07</span><span class="u-name">《星海归途》第二季</span><span class="u-desc">第5集已上线，本周进入中期转折，弹幕讨论集中在配角动机</span><span class="u-badge">番剧更新</span></div>
+      <div class="update-row"><span class="u-time">11-07</span><span class="u-name">《山海拾遗录》</span><span class="u-desc">第9集更新，单元故事转向山海经异兽，美术组放出分镜稿</span><span class="u-badge">国创更新</span></div>
+      <div class="update-row"><span class="u-time">11-06</span><span class="u-name">知识区年度企划</span><span class="u-desc">多位科普UP主联合投稿，主题为“日常物品里的技术史”</span><span class="u-badge">专题上线</span></div>
+      <div class="update-row"><span class="u-time">11-06</span><span class="u-name">《雾港谜案》</span><span class="u-desc">最终章实况放出，UP主同步更新了无剧透图文攻略</span><span class="u-badge">实况更新</span></div>
+      <div class="update-row"><span class="u-time">11-05</span><span class="u-name">年度鬼畜大赏</span><span class="u-desc">投稿通道开启，官方公布三个投稿方向与评选规则</span><span class="u-badge">活动开启</span></div>
+      <div class="update-row"><span class="u-time">11-05</span><span class="u-name">深夜杂谈直播间</span><span class="u-desc">本周改为双主播轮班，新增观众来信环节</span><span class="u-badge">直播预告</span></div>
+      <div class="update-row"><span class="u-time">11-04</span><span class="u-name">《老港片里的市井细节》</span><span class="u-desc">第7集上线，聚焦茶餐厅与街市招牌的视觉语言</span><span class="u-badge">系列更新</span></div>
+      <div class="update-row"><span class="u-time">11-04</span><span class="u-name">音乐区现场企划</span><span class="u-desc">新增两场小剧场实录，支持多机位切换观看</span><span class="u-badge">内容上新</span></div>
+      <div class="update-row"><span class="u-time">11-03</span><span class="u-name">生活区纪录片单元</span><span class="u-desc">《一个人住的第300天》推出合集版，方便连续观看</span><span class="u-badge">合集上线</span></div>
+      <div class="update-row"><span class="u-time">11-03</span><span class="u-name">游戏区赛事专区</span><span class="u-desc">秋季赛程表公布，回放与集锦入口同步整理</span><span class="u-badge">赛事动态</span></div>
+      <div class="update-row"><span class="u-time">11-02</span><span class="u-name">影视区拉片专栏</span><span class="u-desc">新增“一镜到底”专题，收录六部影片的镜头拆解</span><span class="u-badge">专栏更新</span></div>
+      <div class="update-row"><span class="u-time">11-02</span><span class="u-name">番剧追更日历</span><span class="u-desc">冬季新番表初版公布，含开播时间与集数预估</span><span class="u-badge">追更指南</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 深度解析 ========== -->
+<section class="sec" id="deep">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>深度解析：b站内容生态到底怎么运转</h2>
+        <p>从分区、二创到弹幕文化，理解它为什么留得住人</p>
+      </div>
+    </div>
+    <div class="deep">
+      <h3>分区不是分类，而是内容生产的组织方式</h3>
+      <p>很多人第一次打开<b>b站</b>，会被首页密密麻麻的推荐搞晕。其实它的分区逻辑并不复杂：番剧、国创、电影、电视剧属于“版权长内容”，游戏、知识、生活、美食属于“UP主原创内容”，鬼畜、音乐、舞蹈属于“二创与表现型内容”，直播则是“实时互动内容”。这四类内容的生产周期、观看方式和互动习惯完全不同，理解这一点，你就能明白为什么b站的首页既有每集固定的番剧，也有随时可能爆火的一条短视频。</p>
+      <p>更关键的是，<span class="hl">分区决定了内容的评价标准</span>。番剧看的是剧情与制作，游戏实况看的是操作与节目效果，知识区看的是信息准确度和表达清晰度，鬼畜区看的是创意与卡点。用同一套标准去评价所有内容，很容易得出“b站内容参差不齐”的结论，实际上只是你没找到对应分区的评价坐标。</p>
+
+      <h3>UP主生态：从个人创作到稳定栏目化</h3>
+      <p>b站最具辨识度的部分，是围绕UP主形成的创作生态。早期UP主多以兴趣驱动，更新随缘；如今头部创作者普遍走向栏目化，固定片头、固定结构、固定更新频率，甚至形成系列化的内容品牌。对观众而言，这意味着追更体验更稳定；对平台而言，这意味着内容供给更可预期。</p>
+      <p>但栏目化也带来一个问题：内容容易同质化。所以真正值得长期关注的UP主，往往在两个方向上做得更好——要么在选题上持续挖掘别人没讲过的角度，要么在表达上形成极强的个人风格。你在挑选关注对象时，不妨先看三条不同时期的作品，判断对方是“稳定输出”还是“偶尔爆款”，这比单看播放量更靠谱。</p>
+
+      <h3>弹幕与评论：b站的第二内容层</h3>
+      <p>如果说视频是b站的第一内容层，那弹幕和评论就是第二内容层，而且往往是它最难被替代的部分。一条设计巧妙的弹幕，能把平淡画面变成集体笑点；一条考据型评论，能把科普视频的深度再往下挖一层。很多观众养成了“先看一遍视频，再开弹幕看一遍”的习惯，本质上是把观看变成了参与。</p>
+      <p>当然，弹幕也有噪音。密集刷屏、无意义重复、情绪化争吵都会影响体验。比较实用的做法是：第一次观看关闭弹幕专注内容，第二遍再打开弹幕看反应；遇到争议性话题时，优先看高赞评论而不是滚动弹幕。<span class="hl">把弹幕当调味料而不是主菜</span>，观看体验会稳定很多。</p>
+
+      <h3>节奏与消费体验：为什么b站适合“慢慢看”</h3>
+      <p>和以短视频为主的平台相比，b站保留了相当比例的中长视频。知识区的40分钟科普、影视区的逐帧拉片、游戏区的多P实况，都需要观众投入连续时间。这种节奏看似“反效率”，但它满足的是一种更深的消费需求——不是打发时间，而是获得完整的理解或情绪体验。</p>
+      <p>这也解释了为什么b站用户普遍有“收藏夹吃灰”的困扰：内容太长，当下没时间看，就先收藏。对这类用户，建议按主题建立小清单，每次只处理一个主题，避免收藏夹变成无底洞。本页的分区入口和热门推荐，其实就是为了减少这种选择成本而设计的。</p>
+
+      <h3>适合人群与同类内容比较</h3>
+      <p>b站适合的人群比想象中更广：学生群体可以在这里找到学习资源和兴趣社群；上班族可以在这里找到陪伴感和解压内容；内容从业者可以在这里观察二创生态和社区运营。相对而言，如果你只想要极短、极快的碎片娱乐，短视频平台可能更直接；但如果你希望内容有延续性、有讨论空间、有社区氛围，b站的匹配度会更高。</p>
+      <p>搜索<b>b站</b>这个词的人，通常想弄明白三件事：这里有什么值得看、怎么找到它、以及怎么参与进去。本页的结构就是围绕这三个问题展开的，后续的分区入口和体验指南会给出更具体的路径。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 体验指南 ========== -->
+<section class="sec" id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>b站体验指南</h2>
+        <p>让浏览更高效、追更更省心的几个习惯</p>
+      </div>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <div class="guide-icon">🧭</div>
+        <h3>先定分区再刷首页</h3>
+        <p>直接进分区页比刷推荐更可控，尤其适合有明确兴趣方向的用户，能减少无效浏览时间。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-icon">📌</div>
+        <h3>用收藏夹做主题清单</h3>
+        <p>按“待看”“在追”“已看完”分类，比一股脑收藏更容易回访，也避免内容沉底。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-icon">🔔</div>
+        <h3>关注更新而非只看推荐</h3>
+        <p>把稳定更新的UP主和番剧加入关注，追更提醒比算法推荐更准时。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-icon">📱</div>
+        <h3>移动端优先看短内容</h3>
+        <p>通勤时段适合看短视频与切片，长视频留给完整时间段，观看完成度会更高。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-icon">💬</div>
+        <h3>弹幕开关按需使用</h3>
+        <p>首次观看关弹幕、二刷开弹幕，是兼顾内容理解与社区氛围的实用做法。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-icon">🔗</div>
+        <h3>顺着推荐扩展路径</h3>
+        <p>从一个视频跳到相关系列或同UP主作品，比随机刷更容易形成完整认知。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>b站常见问题</h2>
+        <p>新老用户问得最多的六个问题</p>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>第一次用b站，应该从哪个分区开始？</h3>
+        <p>建议先想清楚自己的目的：想放松就看生活区和鬼畜区，想追剧就进番剧与国创，想学东西就去知识区，想找陪伴感可以试直播。不用一开始就逛遍所有分区，先从一到两个方向切入，等熟悉了推荐逻辑再扩展，效率会高很多。</p>
+      </div>
+      <div class="faq-item">
+        <h3>b站的番剧和国创有什么区别？</h3>
+        <p>番剧主要指引进的日本动画及部分海外动画，更新节奏跟随原播出周期；国创是国产动画，题材覆盖玄幻、科幻、日常等，更新周期以周更为主。两者在分区上是分开的，追更时注意看各自的更新日历，避免混淆。</p>
+      </div>
+      <div class="faq-item">
+        <h3>怎么判断一个UP主值不值得长期关注？</h3>
+        <p>看三条不同时期的作品最有效：早期作品看基本功，近期作品看稳定性，爆款作品看上限。如果三条都能接受，基本可以放心关注。另外留意更新频率和评论区氛围，稳定更新和良性讨论往往比单条高播放更有价值。</p>
+      </div>
+      <div class="faq-item">
+        <h3>弹幕太吵影响观看怎么办？</h3>
+        <p>最直接的办法是关闭弹幕或调低弹幕密度，也可以设置屏蔽关键词和屏蔽等级。比较推荐的观看节奏是：第一遍关弹幕看内容，第二遍开弹幕看反应。这样既不影响理解，也能享受社区氛围。</p>
+      </div>
+      <div class="faq-item">
+        <h3>知识区的长视频真的看得完吗？</h3>
+        <p>不一定非要一次看完。可以按章节跳转，或者先看评论区的高赞总结再决定是否完整观看。对于信息密度高的内容，建议分两次看，中间留时间消化，比一口气刷完记得更牢。</p>
+      </div>
+      <div class="faq-item">
+        <h3>想找同类内容，有什么扩展方法？</h3>
+        <p>三个路径比较有效：一是看视频结尾的相关系列推荐，二是进UP主主页看往期作品，三是看评论区里其他人提到的作品名。这三个入口通常比首页推荐更精准，也更容易发现同类型但播放量不高的优质内容。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 评论 ========== -->
+<section class="sec" id="cmt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>用户评论</h2>
+        <p>近 30 天社区讨论摘录，观点不代表本站立场</p>
+      </div>
+    </div>
+    <div class="cmt-grid">
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#fb7299">柠</div><div class="cmt-name">柠檬不酸</div><div class="cmt-time">11-06</div></div>
+        <p>《星海归途》第二季真的比第一季稳，前几集我还担心节奏拖，第五集直接把线索收回来了。就是弹幕有点剧透，建议新观众第一遍关弹幕。</p>
+        <div class="cmt-like">👍 128 · 回复 14</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#00a1d6">路</div><div class="cmt-name">路过的考据党</div><div class="cmt-time">11-05</div></div>
+        <p>知识区那期货币的视频信息量是真的大，评论区补充的考古资料比正片还长。这种内容就适合慢慢看，倍速反而浪费了。</p>
+        <div class="cmt-like">👍 96 · 回复 8</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#7c5cff">夜</div><div class="cmt-name">夜航船</div><div class="cmt-time">11-05</div></div>
+        <p>《雾港谜案》实况做得挺克制的，没有为了节目效果乱喊，也没有剧透。缺点是更新有点慢，等最终章等了两周。</p>
+        <div class="cmt-like">👍 74 · 回复 11</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#f5a623">小</div><div class="cmt-name">小满今天做饭了吗</div><div class="cmt-time">11-04</div></div>
+        <p>生活区那个一个人住的系列我是当睡前音频听的，几乎不剪辑这点很好，比那些节奏飞快的Vlog舒服多了。</p>
+        <div class="cmt-like">👍 63 · 回复 5</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#e85a84">阿</div><div class="cmt-name">阿宅不宅</div><div class="cmt-time">11-04</div></div>
+        <p>年度鬼畜大赏那个调音确实强，但我总觉得最近鬼畜区的创意有点重复，希望能多一点新梗，别老是那几个名场面。</p>
+        <div class="cmt-like">👍 88 · 回复 22</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#00a1d6">老</div><div class="cmt-name">老港片爱好者</div><div class="cmt-time">11-03</div></div>
+        <p>《老港片里的市井细节》第七集讲茶餐厅招牌，讲得挺细。可惜有几处地名我不太熟，希望后面能配个地图。</p>
+        <div class="cmt-like">👍 51 · 回复 6</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#7c5cff">星</div><div class="cmt-name">星野拾遗</div><div class="cmt-time">11-03</div></div>
+        <p>《山海拾遗录》的美术是真的顶，水墨风没有做成廉价滤镜，分镜也讲究。剧情偏文艺，可能不是所有人都吃这一套。</p>
+        <div class="cmt-like">👍 70 · 回复 9</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#fb7299">听</div><div class="cmt-name">听歌不睡觉</div><div class="cmt-time">11-02</div></div>
+        <p>小剧场Live合辑的收音很干净，没有过度修音这点要夸。要是能出个纯音频版就更好了，通勤听正合适。</p>
+        <div class="cmt-like">👍 44 · 回复 4</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#2b2f38">深</div><div class="cmt-name">深夜刷手机</div><div class="cmt-time">11-02</div></div>
+        <p>杂谈直播间氛围确实好，弹幕没什么戾气。不过双主播轮班之后风格有点不统一，希望固定一下节奏。</p>
+        <div class="cmt-like">👍 39 · 回复 7</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#00a1d6">数</div><div class="cmt-name">数据流观察</div><div class="cmt-time">11-01</div></div>
+        <p>感觉b站现在首页推荐越来越像短视频了，还是习惯直接进分区看。这个页面的分区入口整理得挺清楚，收藏了。</p>
+        <div class="cmt-like">👍 112 · 回复 18</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#f5a623">新</div><div class="cmt-name">新来的观众</div><div class="cmt-time">10-31</div></div>
+        <p>刚注册没多久，番剧国创分不清，看完这个页面终于搞明白了。就是希望多讲讲怎么找冷门好内容，推荐位太卷了。</p>
+        <div class="cmt-like">👍 87 · 回复 13</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#e85a84">追</div><div class="cmt-name">追更使我快乐</div><div class="cmt-time">10-30</div></div>
+        <p>收藏夹已经八百多条了，看完这篇决定今晚清理一下，按主题分了个类。建议大家都试试，真的能治好收藏夹吃灰。</p>
+        <div class="cmt-like">👍 58 · 回复 10</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#7c5cff">中</div><div class="cmt-name">中立观众</div><div class="cmt-time">10-29</div></div>
+        <p>说实话番剧质量这两年起伏挺大的，好的很好，平庸的也不少。追番前先看两集再决定要不要继续，别被评分绑架。</p>
+        <div class="cmt-like">👍 66 · 回复 15</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#00a1d6">考</div><div class="cmt-name">考研人小周</div><div class="cmt-time">10-28</div></div>
+        <p>知识区真的是宝藏，就是容易一看看一晚上，学没学进去不好说。现在强迫自己只看收藏里的，不刷首页了。</p>
+        <div class="cmt-like">👍 93 · 回复 12</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#fb7299">弹</div><div class="cmt-name">弹幕研究员</div><div class="cmt-time">10-27</div></div>
+        <p>二刷开弹幕这个习惯我也是最近才养成，确实能发现很多第一次没注意的细节。不过有些视频弹幕太多，得调屏蔽等级。</p>
+        <div class="cmt-like">👍 47 · 回复 6</div>
+      </div>
+
+      <div class="cmt">
+        <div class="cmt-head"><div class="avatar" style="background:#f5a623">慢</div><div class="cmt-name">慢半拍</div><div class="cmt-time">10-26</div></div>
+        <p>长视频确实好看，但完整时间真的难凑。我现在的做法是周末集中看，工作日只看切片，效果还不错。</p>
+        <div class="cmt-like">👍 35 · 回复 3</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== 相关资讯 ========== -->
+<section class="sec" id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>b站相关资讯</h2>
+        <p>内容动态、专题企划与观看趋势</p>
+      </div>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">2026-11-06</div>
+        <h3>知识区年度联合企划上线，多位科普UP主同题投稿</h3>
+        <p>本次企划以“日常物品里的技术史”为主题，参与者从衣食住行切入讲技术演进，适合按主题集中观看。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-05</div>
+        <h3>年度鬼畜大赏投稿通道开启，评选规则同步公布</h3>
+        <p>官方公布三个投稿方向，涵盖调音、剪辑与原创混剪。历年获奖作品往往是当年网络热梗的集中体现。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-04</div>
+        <h3>冬季新番表初版释出，追更党开始排片</h3>
+        <p>初版包含开播时间与集数预估，部分作品尚未定档。建议结合国创与番剧两个分区一起排追更计划。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-03</div>
+        <h3>生活区纪录片单元推出合集版，方便连续观看</h3>
+        <p>原本分散的日常记录内容被整理为合集，适合作为背景音或睡前内容消费，观看完成度明显提升。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-02</div>
+        <h3>影视区拉片专栏新增“一镜到底”专题</h3>
+        <p>专题收录六部影片的镜头拆解，重点分析长镜头的调度与视听语言，适合对影视制作感兴趣的观众。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-01</div>
+        <h3>游戏区秋季赛事专区上线，回放与集锦集中整理</h3>
+        <p>赛程表、回放入口与精彩集锦集中在同一页面，方便补看错过的比赛，也便于按战队检索相关内容。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 订阅 ========== -->
+<section class="sec" id="sub">
+  <div class="wrap">
+    <div class="subscribe">
+      <div>
+        <h2>订阅b站内容更新提醒</h2>
+        <p>留下邮箱，每周获取一次本页整理的番剧、国创与热门内容更新摘要</p>
+      </div>
+      <form class="sub-form" onsubmit="return false;">
+        <input type="email" placeholder="你的邮箱地址" aria-label="邮箱">
+        <button type="button">立即订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 页脚 ========== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo"><div class="logo-mark">B</div><span><b>b站</b>内容导航</span></div>
+        <p>本页为b站内容专题整理页，聚焦分区导览、热门推荐、追更指南与社区讨论，帮助用户更高效地找到值得观看的内容。页面内容为编辑整理与模拟示例，与平台官方无隶属关系。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容导航</h4>
+        <a href="/#hot">热门推荐</a>
+        <a href="/#update">最新更新</a>
+        <a href="/#cat">分区入口</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div class="foot-col">
+        <h4>使用帮助</h4>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#cmt">用户评论</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+      <div class="foot-col">
+        <h4>友情链接</h4>
+        <a href="/#intro">内容简介</a>
+        <a href="/#sub">订阅提醒</a>
+        <a href="/#hot">番剧国创</a>
+        <a href="/#cat">直播互动</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 b站内容导航 · 内容整理与示例页面，仅供参考</span>
+      <span>免责声明：本页所涉内容名称、数据与评论均为编辑整理或模拟示例，不构成任何官方信息，请以平台实际展示为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+    </html>
